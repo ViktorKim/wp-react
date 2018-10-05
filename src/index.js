@@ -19,13 +19,22 @@ import routes from './routes';
 
 import * as serviceWorker from './serviceWorker';
 
+import PageHeader from "./components/common/PageHeader";
+import PageFooter from "./components/common/PageFooter";
+
 // create REDUX storage
 const STORE = createStore(reducers, composeWithDevTools());
 
 ReactDOM.render(
     <Provider store={STORE}>
         <Router>
-            {routes}
+            <div className='page__wrapper'>
+                <div>
+                    <PageHeader />
+                    {routes}
+                </div>
+                <PageFooter />
+            </div>
         </Router>
     </Provider>
     ,
