@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^4.1.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
@@ -15,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "scss-watch": "sass --watch ./src/main.scss:./src/main.css",
+    "start-dev": "concurrently --kill-others \"npm run scss-watch\" \"npm run start\""
   },
   "eslintConfig": {
     "extends": "react-app"

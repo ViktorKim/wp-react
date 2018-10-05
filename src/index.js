@@ -10,6 +10,9 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 // Add Router
 import {BrowserRouter as Router} from 'react-router-dom';
 
+// Include styles
+import './main.css';
+
 //Custom imports
 import reducers from './reducers';
 import routes from './routes';
