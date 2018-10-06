@@ -42,6 +42,6 @@ function kim_register_required_plugins() {
 
 //Register nav menu
 add_action( 'after_setup_theme', 'kim_register_nav_menu' );
-function theme_register_nav_menu() {
+function kim_register_nav_menu() {
     register_nav_menu( 'primary', 'Primary Menu' );
 }
