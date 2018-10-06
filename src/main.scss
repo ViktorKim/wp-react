@@ -2,6 +2,8 @@
 @import "../node_modules/bootstrap/scss/bootstrap-reboot";
 @import "../node_modules/bootstrap/scss/bootstrap-grid";
 
+$gray-bg: #ccc;
+
 //Custom styles
 html, body, #root{
   height: 100%;
@@ -12,4 +14,9 @@ html, body, #root{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.footer{
+  background-color: $gray-bg;
+  text-align: center;
 }
