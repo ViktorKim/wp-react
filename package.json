@@ -18,7 +18,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "scss-watch": "sass --watch ./src/main.scss:./src/main.css",
-    "start-dev": "concurrently --kill-others \"npm run scss-watch\" \"npm run start\""
   },
   "eslintConfig": {
     "extends": "react-app"
