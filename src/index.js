@@ -3,9 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Add Redux
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from "react-redux";
 import {composeWithDevTools} from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
 
 // Add Router
 import {BrowserRouter as Router} from 'react-router-dom';
@@ -23,17 +24,17 @@ import PageHeader from "./components/common/PageHeader";
 import PageFooter from "./components/common/PageFooter";
 
 // create REDUX storage
-const STORE = createStore(reducers, composeWithDevTools());
+const STORE = createStore(reducers, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.render(
     <Provider store={STORE}>
         <Router>
             <div className='page__wrapper'>
                 <div>
-                    <PageHeader />
+                    <PageHeader/>
                     {routes}
                 </div>
-                <PageFooter />
+                <PageFooter/>
             </div>
         </Router>
     </Provider>
