@@ -1,11 +1,18 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import {NavLink} from 'react-router-dom';
 
-const NavMenu = () => {
+const NavMenu = ({links}) => {
     return (
         <nav>
-            <NavLink to='/'>Home</NavLink>
-            <NavLink to='/404'>404</NavLink>
+
+            {
+                Object.keys(links).map((key) => {
+                    const _URL = new URL(links[key]['url']);
+                    return (
+                        <NavLink key={links[key]['ID']} to={_URL.pathname}>{links[key]['title']}</NavLink>
+                    )
+                })
+            }
         </nav>
     )
 };

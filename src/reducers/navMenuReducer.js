@@ -1,12 +1,17 @@
+const INITIAL_STATE = {
+    main_menu: {}
+};
 
-
-export default function (state = 0, action) {
+export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
-        case '@@INIT':
-            return state + 1;
-        case 'DECREMENT':
-            return state - 1;
+        case 'MAIN_MENU_LOADED':
+            return {
+                ...state,
+                main_menu: {
+                    ...action.payload
+                }
+            };
         default:
-            return state
+            return state;
     }
 };
