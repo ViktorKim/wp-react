@@ -1,0 +1,13 @@
+// Header
+.header{
+  .header__navbar{
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-menu{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+}

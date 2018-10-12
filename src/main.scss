@@ -4,34 +4,8 @@
 
 $gray-bg: #ccc;
 
-//Custom styles
-html, body, #root{
-  height: 100%;
-}
+@import "./styles/general";
+@import "./styles/header";
+@import "./styles/footer";
 
-.page__wrapper{
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-// Header
-.header{
-  .header__navbar{
-    display: flex;
-    justify-content: space-between;
-  }
-  .main-menu{
-    display: none;
-    &.active{
-      display: block;
-    }
-  }
-}
-
-
-.footer{
-  background-color: $gray-bg;
-  text-align: center;
-}
+@import "./styles/media";

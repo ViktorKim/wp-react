@@ -1,0 +1,23 @@
+@include media-breakpoint-up(xs) {
+
+}
+@include media-breakpoint-up(sm) {
+
+}
+@include media-breakpoint-up(md) {
+    // Header
+    .header{
+        .main-menu{
+            display: block;
+        }
+        .menu-toggle{
+            display: none;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+
+}
+@include media-breakpoint-up(xl) {
+
+}
