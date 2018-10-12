@@ -3,8 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 const NavMenu = ({links}) => {
     return (
-        <nav>
-
+        <nav className="main-menu">
             {
                 Object.keys(links).map((key) => {
                     const _URL = new URL(links[key]['url']);
