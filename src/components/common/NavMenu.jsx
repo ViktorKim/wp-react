@@ -5,10 +5,10 @@ const NavMenu = ({links}) => {
     return (
         <nav className="main-menu">
             {
-                Object.keys(links).map((key) => {
-                    const _URL = new URL(links[key]['url']);
+                Object.values(links).map((link) => {
+                    const _URL = new URL(link['url']);
                     return (
-                        <NavLink key={links[key]['ID']} to={_URL.pathname}>{links[key]['title']}</NavLink>
+                        <NavLink key={link['ID']} to={_URL.pathname}>{link['title']}</NavLink>
                     )
                 })
             }
