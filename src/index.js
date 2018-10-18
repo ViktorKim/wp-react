@@ -12,7 +12,7 @@ import thunk from 'redux-thunk';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 // Include styles
-import './main.css';
+import './main.scss';
 
 //Custom imports
 import reducers from './reducers';
