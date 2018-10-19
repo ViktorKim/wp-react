@@ -8,6 +8,7 @@
 
 add_theme_support('menus');
 add_theme_support('widgets');
+add_theme_support('custom-logo');
 
 // Include TGM Activator
 require_once get_template_directory() . '/modules/TGM-Plugin-Activation-2.6.1/class-tgm-plugin-activation.php';
