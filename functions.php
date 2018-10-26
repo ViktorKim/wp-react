@@ -30,6 +30,16 @@ function kim_register_required_plugins() {
             'slug'      => 'wp-api-menus',
             'required'  => true,
         ),
+        array(
+            'name'      => 'Unyson',
+            'slug'      => 'unyson',
+            'required'  => true,
+        ),
+        array(
+            'name'      => 'Gutenberg',
+            'slug'      => 'gutenberg',
+            'required'  => true,
+        ),
 
     );
     $config = array(
@@ -49,4 +59,15 @@ function kim_register_required_plugins() {
 add_action( 'after_setup_theme', 'kim_register_nav_menu' );
 function kim_register_nav_menu() {
     register_nav_menu( 'primary', 'Primary Menu' );
+}
+
+// Custom endpoints
+add_action( 'rest_api_init', function () {
+    register_rest_route( 'kim/v1', '/logo)', array(
+        'methods' => 'GET',
+        'callback' => 'my_awesome_func',
+    ) );
+} );
+function my_awesome_func(){
+    return [];
 }
